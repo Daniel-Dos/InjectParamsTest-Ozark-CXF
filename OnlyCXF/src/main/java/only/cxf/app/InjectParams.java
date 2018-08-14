@@ -29,23 +29,18 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-/**
- * @author <a href="mailto:daniel.dias@soujava.org.br">Daniel Dias</a>
- * github:Daniel-Dos
- * twitter:@danieldiasjava
- */
 @Path("hello")
 @Produces(MediaType.TEXT_HTML)
 public class InjectParams {
 
 	@QueryParam("fieldValue")
-    private String fieldValue;
-	
+	private String fieldValue;
+
 	@GET
 	public Response getFieldParam() {
 		return Response.ok().entity(fieldValue).build();
 	}
-	
+
 	@GET
 	public Response getFieldParam2(@QueryParam("fieldValue2") String fieldValue2) {
 		return Response.ok().entity(fieldValue2).build();
