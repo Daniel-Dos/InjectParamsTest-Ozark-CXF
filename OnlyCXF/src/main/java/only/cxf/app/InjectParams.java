@@ -39,11 +39,13 @@ public class InjectParams {
 	private String fieldValue;
 
 	@GET
+    @Path("/param")
 	public Response getFieldParam() {
 		return Response.ok().entity(fieldValue).build();
 	}
 
 	@GET
+	@Path("/param2")
 	public Response getFieldParam2(@QueryParam("fieldValue2") String fieldValue2) {
 		return Response.ok().entity(fieldValue2).build();
 	}
