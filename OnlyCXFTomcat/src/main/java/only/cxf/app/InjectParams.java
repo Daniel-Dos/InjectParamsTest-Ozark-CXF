@@ -39,7 +39,7 @@ public class InjectParams {
 	private String fieldValue;
 
 	@GET
-    @Path("/param")
+	@Path("/param")
 	public Response getFieldParam() {
 		return Response.ok().entity(fieldValue).build();
 	}
